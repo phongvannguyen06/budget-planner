@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Deal } from '../model/Deal';
+import {DataService} from '../data.service'
 
 @Component({
   selector: 'app-deal',
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DealComponent implements OnInit {
 
-  constructor() { }
+  deals: Array<Deal>;
+
+  constructor(private dataService: DataService) { }
 
   ngOnInit(): void {
+    this.dataService.getDeals().subscribe(next => this.deals = next);
   }
 
 }

@@ -1,6 +1,7 @@
 <div class="social-box">
   <div class="container">
     <div class="row">
+      <!-- Card Begin -->
       <div
         class="col-lg-4 col-xs-12 text-center"
         *ngFor="let vendor of vendors"
@@ -14,9 +15,24 @@
             <span>{{ vendor.description }}</span>
           </div>
           <div class="box-btn">
-            <a href="#">ID#: {{vendor.id}}</a>
+            <a href="#">ID#: {{ vendor.id }}</a>
           </div>
+          <button
+            class="btn btn-primary mt-2"
+            type="button"
+            (click)="viewRoom(vendor.id)"
+          >
+            View
+          </button>
         </div>
+      </div>
+      <!-- Card End -->
+      <div>
+        <!-- <app-vendor-edit></app-vendor-edit> -->
+        <app-vendor-details
+          *ngIf="action === 'view'"
+          [vendor]="selectedVendor"
+        ></app-vendor-details>
       </div>
     </div>
   </div>
