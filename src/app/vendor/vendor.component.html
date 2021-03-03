@@ -1,1 +1,23 @@
-<p>vendor works!</p>
+<div class="social-box">
+  <div class="container">
+    <div class="row">
+      <div
+        class="col-lg-4 col-xs-12 text-center"
+        *ngFor="let vendor of vendors"
+      >
+        <div class="box">
+          <i class="fa fa-behance fa-3x" aria-hidden="true"></i>
+          <div class="box-title">
+            <h3>{{ vendor.name }}</h3>
+          </div>
+          <div class="box-text">
+            <span>{{ vendor.description }}</span>
+          </div>
+          <div class="box-btn">
+            <a href="#">ID#: {{vendor.id}}</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
