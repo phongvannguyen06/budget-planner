@@ -1,7 +1,6 @@
-<h1> {{vendor.id == null ? 'Add' : 'Edit'}} Vendor</h1>
+<h1> {{formVendor.id == null ? 'Add' : 'Edit'}} Vendor</h1>
 
 <form>
-
   <div class="form-group">
     <label for="name">Id: {{vendor.id}}</label>
   </div>
@@ -16,5 +15,5 @@
   </div>
 
 
-  <button type="submit" class="btn btn-primary">Save</button>
+  <button type="button" class="btn btn-primary" (click)="onSubmit()">Save</button>
 </form>

@@ -27,12 +27,21 @@ export class VendorComponent implements OnInit {
         this.selectedVendor = this.vendors.find(vendor => vendor.id === +id);
         this.action = params['action'];
       }
+
+      if (params['action'] === 'add') {
+        this.selectedVendor = new Vendor();
+      }
     });
   }
 
-  viewRoom(id: number) {
+  viewVendor(id: number) {
     this.router.navigate(['vendors'], {
       queryParams: { id: id, action: 'view' },
     });
+  }
+
+  addVendor() {
+    this.selectedVendor = new Vendor();
+    this.router.navigate(['vendors'], {queryParams: {action: 'add'}});
   }
 }

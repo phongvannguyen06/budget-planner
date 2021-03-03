@@ -1,5 +1,5 @@
 <h1>List of Vendors</h1>
-<a class="btn btn-warning mb-3">Add Vendor</a>
+<a class="btn btn-warning mb-3" (click)="addVendor()">Add Vendor</a>
 <div class="social-box">
   <div class="container">
     <div class="row">
@@ -22,20 +22,21 @@
           <button
             class="btn btn-primary mt-2"
             type="button"
-            (click)="viewRoom(vendor.id)"
+            (click)="viewVendor(vendor.id)"
           >
             View
           </button>
         </div>
       </div>
       <!-- Card End -->
-      <div>
-        <app-vendor-edit *ngIf="action === 'edit'" [vendor]="selectedVendor"></app-vendor-edit>
-        <app-vendor-details
-          *ngIf="action === 'view'"
-          [vendor]="selectedVendor"
-        ></app-vendor-details>
-      </div>
+
     </div>
   </div>
+</div>
+<div>
+  <app-vendor-edit *ngIf="action === 'edit' || action === 'add'" [vendor]="selectedVendor"></app-vendor-edit>
+  <app-vendor-details
+    *ngIf="action === 'view'"
+    [vendor]="selectedVendor"
+  ></app-vendor-details>
 </div>

@@ -17,6 +17,25 @@ export class DataService {
     return of(this.deals);
   }
 
+  deleteVendor(id : number): Observable<any> {
+    const vendor = this.vendors.find( r => r.id === id);
+    this.vendors.splice(this.vendors.indexOf(vendor), 1);
+    return of(null);
+  }
+
+  addVendor(newVendor: Vendor) : Observable<Vendor> {
+    let id = 0;
+    for (const vendor of this.vendors) {
+      if (vendor.id > id) {
+        id = vendor.id;
+      }
+    }
+
+    newVendor.id = id + 1;
+    this.vendors.push(newVendor);
+    return of(newVendor);
+  }
+
   constructor() {
 
     // list of sample vendors

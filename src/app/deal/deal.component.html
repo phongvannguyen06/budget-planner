@@ -14,14 +14,21 @@
           class="h1 font-weight-normal text-primary text-center mb-0"
           data-pricing-value="15"
         >
-          <span class="price">{{deal.name}}</span>
+          <span class="price">{{ deal.name }}</span>
         </h1>
       </div>
       <div class="card-body pt-0">
         <ul class="list-unstyled mb-4 text-center">
-          <li>Vendor: {{deal.vendor.name}}</li>
-          <li>Cost: ${{deal.cost}}</li>
+          <li>Vendor: {{ deal.vendor.name }}</li>
+          <li>Cost: ${{ deal.cost }}</li>
         </ul>
+        <button
+          class="btn btn-primary btn-md mt-2"
+          type="button"
+          (click)="viewDeal(vendor.id)"
+        >
+          View
+        </button>
       </div>
     </div>
     <!-- Card End -->
