@@ -23,7 +23,6 @@ export class VendorEditComponent implements OnInit {
   }
 
   onSubmit() {
-    console.log("Hello");
     if (this.vendor.id == null) {
       this.dataService.addVendor(this.vendor).subscribe((vendor) =>
         this.router.navigate(['vendors'], {

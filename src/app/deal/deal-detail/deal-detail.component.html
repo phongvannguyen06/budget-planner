@@ -1,0 +1,20 @@
+<div class="userDetails">
+  <h2>Deal Details</h2>
+  <a class="btn btn-small btn-warning mr-2" (click)="editDeal()">edit</a>
+  <a class="btn btn-small btn-warning ml-2" (click)="deleteDeal()">delete</a>
+  <table>
+    <tr>
+      <td><strong>Id:</strong></td><td>{{deal.id}}</td>
+    </tr>
+    <tr>
+      <td><strong>Name:</strong></td><td>{{deal.name}}</td>
+    </tr>
+    <tr>
+      <td><strong>Description:</strong></td><td>{{deal.vendor.name}}</td>
+    </tr>
+    <tr>
+      <td><strong>Description:</strong></td><td>${{deal.cost}}</td>
+    </tr>
+
+  </table>
+</div>

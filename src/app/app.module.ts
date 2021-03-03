@@ -9,13 +9,15 @@ import { RouterModule, Routes } from '@angular/router';
 import { VendorEditComponent } from './vendor/vendor-edit/vendor-edit.component';
 import { VendorDetailsComponent } from './vendor/vendor-details/vendor-details.component';
 import { FormsModule } from '@angular/forms';
+import { DealEditComponent } from './deal/deal-edit/deal-edit.component';
+import { DealDetailComponent } from './deal/deal-detail/deal-detail.component';
 
 const routes: Routes = [
   { path: 'vendors', component: VendorComponent },
   { path: '', component: DealComponent },
 ];
 @NgModule({
-  declarations: [AppComponent, VendorComponent, DealComponent, MenuComponent, VendorEditComponent, VendorDetailsComponent],
+  declarations: [AppComponent, VendorComponent, DealComponent, MenuComponent, VendorEditComponent, VendorDetailsComponent, DealEditComponent, DealDetailComponent],
   imports: [
     BrowserModule,
     FormsModule,

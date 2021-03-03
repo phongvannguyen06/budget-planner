@@ -1,0 +1,24 @@
+<h1> {{deal.id == null ? 'Add' : 'Edit'}} Deal</h1>
+
+<form>
+  <div class="form-group">
+    <label for="name">Id: {{deal.id}}</label>
+  </div>
+  <div class="form-group">
+    <label for="name">Deal Name:</label>
+    <input type="text" class="form-control" id="name" [(ngModel)]="deal.name"  name="name">
+  </div>
+
+  <div class="form-group">
+    <label for="name">Deal Vendor:</label>
+    <input type="text" class="form-control" id="name" [(ngModel)]="deal.vendor.name"  name="vendor">
+  </div>
+
+  <div class="form-group">
+    <label for="name">Deal Cost:</label>
+    <input type="text" class="form-control" id="name" [(ngModel)]="deal.cost"  name="cost">
+  </div>
+
+
+  <button type="button" class="btn btn-primary" (click)="onSubmit()">Save</button>
+</form>

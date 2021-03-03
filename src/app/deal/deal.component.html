@@ -1,3 +1,5 @@
+<h1>List of Deals</h1>
+<a class="btn btn-warning mb-3" (click)="addDeal()">Add Deal</a>
 <div class="container mb-5 mt-5">
   <div class="pricing card-deck flex-column flex-md-row mb-3">
     <!-- Card Begin -->
@@ -25,7 +27,7 @@
         <button
           class="btn btn-primary btn-md mt-2"
           type="button"
-          (click)="viewDeal(vendor.id)"
+          (click)="viewDeal(deal.id)"
         >
           View
         </button>
@@ -34,3 +36,5 @@
     <!-- Card End -->
   </div>
 </div>
+<app-deal-edit *ngIf="action === 'edit' || action === 'add'" [deal]="selectedDeal"></app-deal-edit>
+<app-deal-detail *ngIf="action === 'view'" [deal]="selectedDeal"></app-deal-detail>
