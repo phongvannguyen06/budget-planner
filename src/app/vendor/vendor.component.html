@@ -1,3 +1,5 @@
+<h1>List of Vendors</h1>
+<a class="btn btn-warning mb-3">Add Vendor</a>
 <div class="social-box">
   <div class="container">
     <div class="row">
@@ -28,7 +30,7 @@
       </div>
       <!-- Card End -->
       <div>
-        <!-- <app-vendor-edit></app-vendor-edit> -->
+        <app-vendor-edit *ngIf="action === 'edit'" [vendor]="selectedVendor"></app-vendor-edit>
         <app-vendor-details
           *ngIf="action === 'view'"
           [vendor]="selectedVendor"

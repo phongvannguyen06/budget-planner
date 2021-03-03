@@ -11,9 +11,12 @@ export class VendorEditComponent implements OnInit {
   @Input()
   vendor: Vendor;
 
+  formVendor: Vendor;
+
   constructor() { }
 
   ngOnInit(): void {
+    this.formVendor = Object.assign({}, this.vendor);
   }
 
 

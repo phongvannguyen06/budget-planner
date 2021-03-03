@@ -8,6 +8,7 @@ import { MenuComponent } from './menu/menu.component';
 import { RouterModule, Routes } from '@angular/router';
 import { VendorEditComponent } from './vendor/vendor-edit/vendor-edit.component';
 import { VendorDetailsComponent } from './vendor/vendor-details/vendor-details.component';
+import { FormsModule } from '@angular/forms';
 
 const routes: Routes = [
   { path: 'vendors', component: VendorComponent },
@@ -17,6 +18,7 @@ const routes: Routes = [
   declarations: [AppComponent, VendorComponent, DealComponent, MenuComponent, VendorEditComponent, VendorDetailsComponent],
   imports: [
     BrowserModule,
+    FormsModule,
     RouterModule.forRoot(routes)
   ],
   providers: [],
